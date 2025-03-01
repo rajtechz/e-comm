@@ -3,7 +3,7 @@ import TopBar from "../Layout/Topbar";
 import Navbar from "./Navbar";
 function Header() {
   return (
-    <header>
+    <header className="border-b border-gray-200">
       {/* Topbar */}
       <TopBar />
       {/* Navbar */}

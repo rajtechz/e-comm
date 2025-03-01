@@ -7,7 +7,7 @@ function TopBar() {
     <>
       {/* Topbar */}
       <div className="bg-[#ea2e0e] text-white">
-        <div className="max-w-screen-lg mx-auto flex justify-between  items-center py-3">
+        <div className="container mx-auto flex justify-between  items-center py-3">
           <div className="hidden md:flex items-center space-x-4">
             <a href="#" className="hover:text-gray-300">
               <TbBrandMeta className="h-5 w-5" />
