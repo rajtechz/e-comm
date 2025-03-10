@@ -102,7 +102,7 @@ function NewArrivals() {
 
   const scroll = (direction) => {
     const scrollAmmount = direction === "left" ? -300 : 300;
-    scrollRef.current.scrollBy({ left: scrollAmmount, behavior : "smooth" });
+    scrollRef.current.scrollBy({ left: scrollAmmount, behavior: "smooth" });
   };
 
   //   updateScrollButton
@@ -128,7 +128,8 @@ function NewArrivals() {
       container.addEventListener("scroll", updateScrollButton);
       updateScrollButton();
     }
-  });
+    return () => container.removeEventListener("scroll", updateScrollButton);
+  }, []);
   return (
     <section className="py-16 px-4 lg:px-0">
       <div className="container mx-auto mb-10 relative text-center">
