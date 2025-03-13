@@ -1,26 +1,33 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+const selectedProduct = {
+  name: "Stylish Jacket ",
+  price: 120,
+  originalPrice: 150,
+  discription: "This is stylish jacket perfact for any occcasion",
+  brand: "KD-Fashion",
+  material: "Leather",
+  sizes: ["S", "M", "L", "XL"],
+  colors: ["red", "Black"],
+  images: [
+    {
+      url: "https://picsum.photos/500/500?random=5",
+      altText: "Stylish Jacket",
+    },
+    {
+      url: "https://picsum.photos/500/500?random=6",
+      altText: "Stylish Jacket",
+    },
+  ],
+};
 function ProductDetails() {
-  const selectedProduct = {
-    name: "Stylish Jacket ",
-    price: 120,
-    originalPrice: 150,
-    discription: "This is stylish jacket perfact for any occcasion",
-    brand: "KD-Fashion",
-    material: "Leather",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["red", "Black"],
-    images: [
-      {
-        url: "https://picsum.photos/500/500?random=5",
-        altText: "Stylish Jacket",
-      },
-      {
-        url: "https://picsum.photos/500/500?random=6",
-        altText: "Stylish Jacket",
-      },
-    ],
-  };
+ const [mainProduct, setMainProduct] =useState("")
+
+ useEffect(()=>{
+ if(selectedProduct?.images.length<0){
+  setMainProduct(selectedProduct?.images[0]?.url)
+ }
+
+ },[selectedProduct])
 
   return (
     <div className="p-6">
@@ -33,6 +40,7 @@ function ProductDetails() {
                 src={image.url}
                 alt={image.altText || `Thumbnail ${index}`}
                 className="h-20 w-20 object-cover rounded-lg cursor-pointer border"
+                onClick={()=>setMainProduct(image?.url)}
               />
             ))}
           </div>
@@ -40,7 +48,7 @@ function ProductDetails() {
           <div className="md:w-1/2 ">
             <div className="mb-4">
               <img
-                src={selectedProduct.images[0]?.url}
+                src={mainProduct}
                 alt="Main Product"
                 className="w-full h-auto object-cover rounded-lg"
               />
@@ -50,9 +58,10 @@ function ProductDetails() {
             {selectedProduct?.images.map((image, index) => (
               <img
                 key={index}
-                src={image.url}
+                src={image?.url}
                 alt={image.altText || `Thumbnail ${index}`}
                 className="h-20 w-20 object-cover rounded-lg cursor-pointer border"
+                onClick={()=>setMainProduct(image?.url)}
               />
             ))}
           </div>
@@ -61,11 +70,11 @@ function ProductDetails() {
             <h1 className="md:text-3xl text-2xl font-semibold mb-2">
               {selectedProduct.name}
             </h1>
-            <p className="text-lg text-gray-600 mb-1 line-through">
+            <p className="text-lg text-red-600 mb-1 line-through ">
               {selectedProduct.originalPrice &&
                 `${selectedProduct.originalPrice}`}
             </p>
-            <p className="text-xl text-gray-500 mb-2">
+            <p className="text-xl text-black-500 mb-2">
               $ {selectedProduct.price}
             </p>
             <p className=" text-gray-600 mb-2">{selectedProduct.discription}</p>
@@ -89,7 +98,7 @@ function ProductDetails() {
               <p className="text-gray-700">Size:</p>
               <div className="flex gap-2 mt-2">
                 {selectedProduct.sizes.map((size) => (
-                  <button className="px-4 py-2 rounded border">{size}</button>
+                  <button className="px-4 py-2 rounded border cursor-pointer">{size}</button>
                 ))}
               </div>
             </div>
