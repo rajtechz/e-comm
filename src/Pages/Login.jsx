@@ -4,11 +4,15 @@ import login from "../assets/assets/login.webp";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("user login :", { email, password });
+  };
   return (
     <div className="flex">
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:p-12">
         <form
+          onSubmit={handleSubmit}
           action=""
           className="w-full max-w-md bg-white p-8 rounded-lg border shadow-sm"
         >
@@ -17,7 +21,7 @@ function Login() {
           </div>
           <h2>Hey there!👋</h2>
           <p className="text-center mb-6">
-            Enter your email and password to login{" "}
+            Enter your email and password to login
           </p>
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-semibold mb-2">
