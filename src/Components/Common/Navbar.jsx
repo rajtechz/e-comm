@@ -20,8 +20,8 @@ function Navbar() {
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div>
-          <Link to="/" className="text-2xl font-medium">
-            Rabbit
+          <Link to="/" className="text-2xl font-bold text-[#fb7185]">
+            KD-Styles
           </Link>
         </div>
         {/* Center Navigation Links  */}

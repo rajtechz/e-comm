@@ -16,7 +16,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=1",
+        url: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -25,7 +25,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=2",
+        url: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -34,7 +34,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=3",
+        url: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -43,7 +43,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=4",
+        url: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -52,7 +52,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=5",
+        url: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -61,7 +61,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=6",
+        url: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -70,7 +70,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=7",
+        url: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -79,7 +79,7 @@ function NewArrivals() {
       name: "Stylish Jacket",
       price: 120,
       images: {
-        url: "https://picsum.photos/500/500?random=8",
+        url: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
         altTex: "Stylish Jacket",
       },
     },
@@ -115,12 +115,7 @@ function NewArrivals() {
       setCanScrollLeft(leftScroll > 0);
       setCanScrollRight(rightScrollable);
     }
-    console.log({
-      scrollLeft: container.scrollLeft,
-      clientWidth: container.clientWidth,
-      containerScrollWidth: container.scrollWidth,
-      offset: scrollRef.current.offsetLeft,
-    });
+    
   };
   useEffect(() => {
     const container = scrollRef.current;

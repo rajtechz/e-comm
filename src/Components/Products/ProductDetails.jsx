@@ -13,11 +13,13 @@ const selectedProduct = {
   colors: ["red", "black"],
   images: [
     {
-      url: "https://picsum.photos/500/500?random=5",
+      url: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+
       altText: "Stylish Jacket",
     },
     {
-      url: "https://picsum.photos/500/500?random=6",
+      url: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+
       altText: "Stylish Jacket",
     },
   ],
@@ -26,10 +28,10 @@ const similarProducts = [
   {
     _id: 1,
     name: "Product 1",
-    Price: 100,
+    price: 100,
     images: [
       {
-        url: "https://picsum.photos/500/500?random=7",
+        url:"https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
         altText: "Stylish Jacket",
       },
     ],
@@ -37,10 +39,10 @@ const similarProducts = [
   {
     _id: 2,
     name: "Product 2",
-    Price: 200,
+    price: 200,
     images: [
       {
-        url: "https://picsum.photos/500/500?random=8",
+        url: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
         altText: "Stylish Jacket",
       },
     ],
@@ -48,10 +50,10 @@ const similarProducts = [
   {
     _id: 3,
     name: "Product 3",
-    Price: 300,
+    price: 300,
     images: [
       {
-        url: "https://picsum.photos/500/500?random=9",
+        url: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
         altText: "Stylish Jacket",
       },
     ],
@@ -59,16 +61,14 @@ const similarProducts = [
   {
     _id: 4,
     name: "Product 4",
-    Price: 400,
+    price: 400,
     images: [
       {
-        url: "https://picsum.photos/500/500?random=10",
+        url: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
         altText: "Stylish Jacket",
       },
     ],
   },
- 
- 
 ];
 function ProductDetails() {
   const [mainImage, setMainImage] = useState(selectedProduct?.images[0]?.url);
@@ -259,7 +259,7 @@ function ProductDetails() {
         </div>
         <div className="mt-20">
           <h2 className="text-2xl m-4 text-center font-medium">
-            You MAy Also Like
+            You May Also Like
           </h2>
           <ProductGrid products={similarProducts} />
         </div>
