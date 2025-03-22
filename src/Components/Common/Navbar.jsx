@@ -27,7 +27,7 @@ function Navbar() {
         {/* Center Navigation Links  */}
         <div className="hidden md:flex space-x-6">
           <Link
-            to="/men"
+            to="collections/All"
             className="text-gray-700 text-sm hover:text-black font-medium uppercase"
           >
             Men
@@ -98,7 +98,7 @@ function Navbar() {
             <h2 className="text-xl font-semibold mb-4">Menu</h2>
             <nav className="space-y-4">
               <Link
-                to="#"
+                to="collections/All"
                 onClick={toggleNavDrawer}
                 className="block text-gray-600 hover:text-black"
               >
